@@ -20,5 +20,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ../  # Adjust this to your project's directory structure
+          local-dir: ./  # Adjust this to your project's directory structure
           server-dir: /public_html/  # Adjust this to your FTP server's path
