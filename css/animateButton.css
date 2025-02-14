@@ -81,6 +81,14 @@ div.animated-button-container {
     transition: all 0.1s ease-out;
     pointer-events: none;
 }
+
+@media (max-width: 546px) {
+    .button--bubble__effect-container {
+        width: 180%;
+        left: -40%;
+    }
+}
+
 .button--bubble__effect-container .circle {
     position: absolute;
     width: 25px;
