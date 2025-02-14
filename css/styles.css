@@ -1,0 +1,75 @@
+/* Updated colors */
+:root {
+    --primary-color: #bdfd6d;
+    --background-color: #272121;
+    --secondary-background-color: #3f3d36;
+    --text-color: #fefcfc;
+    --text-dark-color: var(--background-color);
+    --text-muted: #aaaaaa;
+    --primary-button-text-color: var(--background-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.hero-container, .reference-container-left, .contact-container {
+    background: linear-gradient(135deg, var(--background-color), var(--secondary-background-color));
+}
+
+.reference-container-right {
+    background: var(--text-color);
+    color: var(--background-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-subtitle {
+    color: var(--text-muted);
+}
+
+.btn-primary {
+    padding: 0.8rem 2rem;
+    color: var(--primary-button-text-color);
+    background-color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.skills-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+}

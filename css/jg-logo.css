@@ -1,0 +1,37 @@
+.jg-logo {
+    position: relative;
+    width: 50px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px solid var(--primary-color); /* Border color */
+    border-right: 3px solid var(--primary-color); /* Border color */
+    border-radius: 8px;
+}
+
+.jg-logo::before,
+.jg-logo::after {
+    content: "";
+    position: absolute;
+    width: 50px; /* Same as the container width */
+    height: 35px; /* Same as the container height */
+    border: 3px solid var(--primary-color); /* Border color */
+    border-top: none;
+    border-bottom: none;
+    transform: rotate(60deg);
+    border-radius: 8px;
+}
+
+.jg-logo::after {
+    transform: rotate(-60deg);
+}
+
+.jg-letters {
+    color: var(--primary-color); /* Letter color */
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    z-index: 1; /* Ensure letters are above the border */
+    background: none; /* Ensure no background */
+}

@@ -1,0 +1,52 @@
+/* Fullscreen loader container */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color); /* Base color */
+    opacity: 0.9; /* Apply overall opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it stays above other elements */
+    pointer-events: none; /* Prevent interaction during fade-out */
+    transition: opacity 0.5s ease-out; /* Fade-out effect */
+}
+
+/* Loader animation */
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    color: #fff; /* Updated color for contrast */
+    border: 2px solid;
+    display: grid;
+    box-sizing: border-box;
+    animation: l1 4s infinite linear;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    grid-area: 1/1;
+    margin: auto;
+    width: 70.7%;
+    aspect-ratio: 1;
+    border: 2px solid;
+    box-sizing: content-box;
+    animation: inherit;
+}
+
+.loader::after {
+    width: 50%;
+    aspect-ratio: 1;
+    border: 2px solid;
+    animation-duration: 2s;
+}
+
+@keyframes l1 {
+    100% {
+        transform: rotate(1turn);
+    }
+}
